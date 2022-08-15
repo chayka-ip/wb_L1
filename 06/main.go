@@ -32,7 +32,7 @@ func main() {
 			defer wg.Done()
 			// send data to the channel
 			for i := 0; i < 10; i++ {
-				// sending empty stuct with zero size
+				// sending empty struct with zero size
 				ch <- struct{}{}
 				time.Sleep(1 * time.Millisecond)
 			}
