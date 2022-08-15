@@ -31,7 +31,7 @@ func Sleep3(d time.Duration) {
 }
 
 func Sleep4(d time.Duration) {
-	t := time.Now()
+	t := time.Now().Add(d)
 	sayMessage("Compare time", d)
 	for {
 		if time.Now().After(t) {
