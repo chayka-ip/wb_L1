@@ -23,7 +23,6 @@ func main() {
 }
 
 func firstSolution() {
-	// initialize data array
 	// declare wait group to proceed all required tasks
 	var wg sync.WaitGroup
 	// set number of tasks
@@ -45,7 +44,7 @@ func firstSolution() {
 }
 
 func secondSolution() {
-	// make channle to write data to
+	// make channel to write data to
 	ch := make(chan int, len(a))
 	var wg sync.WaitGroup
 
@@ -62,7 +61,7 @@ func secondSolution() {
 	// run workers to process data from the channel
 	wg.Add(workerCount)
 	for i := 0; i < workerCount; i++ {
-		runWorker(&wg, ch)
+		go runWorker(&wg, ch)
 	}
 
 	wg.Wait()
