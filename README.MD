@@ -103,7 +103,7 @@ func main(){
 2) s2 := []int{}                 // empty slice
 3) s3 := []int{1, 2, 3, 4, 5, 6} // slice with items
 4) s4 := make([]int, 0)          // make with size arg
-5) s5 := *new([]int)             // with new
+5) s5 := new([]int)              // with new (nil slice)
 6) s6 := []rune("123")           // convert string to rune slice
 7) s7 := s3[2:4]                 // slice from other slice
 8) s8 := append(s7, 10, 11)      // append elements to slice
@@ -118,7 +118,7 @@ func main(){
 3) m3 := make(map[int]int, 5)   // make empty map of initial size
 4) m4 := map[int]int{}          // empty map
 5) m5 := map[string]int{"d": 1} // map with items
-6) m6 := *new(map[int]int)      // nil map; cant be edited
+6) m6 := new(map[int]int)       // nil map; cant be edited
 ```
 
 
