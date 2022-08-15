@@ -34,7 +34,7 @@ func GenericSolution() {
 		}()
 	}
 
-	// launch reading workees
+	// launch reading workers
 	for i := 0; i < numWorkers/2; i++ {
 		wg.Add(1)
 		go func() {
