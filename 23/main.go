@@ -48,9 +48,9 @@ func removeItemBreakOrderInplace[T any](slice []T, i uint64) []T {
 	Does not modify source slice.
 	Valid input is considered.
 */
-func removeItemBreakOrder(slice []int, i uint64) []int {
+func removeItemBreakOrder[T any](slice []T, i uint64) []T {
 	lastInd := len(slice) - 1
-	s := append([]int{}, slice...)
+	s := append([]T{}, slice...)
 	s[i] = slice[lastInd]
 	return s[:lastInd]
 }
