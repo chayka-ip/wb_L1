@@ -72,7 +72,7 @@ func main() {
 
 	/*
 		  Output:
-		- CodePanel: Entering 123 into the pannel.
+		- CodePanel: Typing 123 into the pannel.
 	*/
 	client.EnterTextKey(gk)
 
