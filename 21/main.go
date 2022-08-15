@@ -80,7 +80,7 @@ func main() {
 
 	/*
 		Can't execute this
-		client.EnterGrapicsKey(vk)
+		client.EnterTextKey(vk)
 	*/
 
 	va := &VoiceKeyAdapter{*vk}
